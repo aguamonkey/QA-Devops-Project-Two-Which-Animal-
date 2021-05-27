@@ -1,13 +1,19 @@
 from flask import Flask, render_template
+from flask_wtf import Form
 from flask_sqlalchemy import SQLAlchemy
 import requests
 from os import getenv
 from sqlalchemy import desc
+from wtforms.fields.html5 import DateField
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = getenv('DATABASE_URI')
 
 db = SQLAlchemy(app)
+
+class LoginForm(Form):
+    birthdate = DateField('birthdate', format='%Y-%m-%d')
 
 #type now equals name
 class Animals(db.Model):
