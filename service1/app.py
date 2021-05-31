@@ -24,12 +24,14 @@ class Animals(db.Model):
 
 @app.route('/')
 def home():
-    animal = requests.get('http://which_animal_am_i_api:5000/get_animal')
-    noise = requests.post('http://which_animal_am_i_api:5000/get_noise', data=animal.text)
+    animal = requests.get('http://which_animal_am_i_name_api:5000/get_animal')
+    luck_number = requests.post('http://which_animal_am_i_luck_api:5000/get_number', data=animal.text)
+    fortune = requests.post('http://which_animal_am_i_fortune_api:5000/get_fortune', data=animal.text)
+
 
     last_five_animals = Animals.query.order_by(desc(Animals.id)).limit(5).all()
     db.session.add(
-        Animal(
+        Animals(
             name = animal.text,
             noise = noise.text
         )
