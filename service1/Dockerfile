@@ -1,6 +1,6 @@
 FROM python:latest
 WORKDIR /app
-COPY ..
+COPY . .
 RUN pip install -r requirements.txt
-EXPOSE: 5000
+EXPOSE 5000
 ENTRYPOINT ["python", "app.py"]
