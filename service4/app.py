@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # animal generator route here
 @app.route('/get_fortune', methods=['GET'])
-def get_animal():
+def get_fortune():
 
     # There will be a bunch of if statements here:
     #if date this year and between this date and this date
@@ -17,14 +17,6 @@ def get_animal():
     return random.choice(['cow', 'pig', 'horse'])
     
 # animal noise generator route here
-@app.route('/get_noise', methods=['POST'])
-def get_noise():
-    noises = {
-        "cow" : "moo",
-        "pig" : "oink",
-        "horse" : "neigh"
-    }
-    return noises[request.data.decode('utf-8')]
 
 
 if __name__ == "__main__":

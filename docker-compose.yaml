@@ -19,7 +19,7 @@ services:
     container_name: which_animal_am_i_luck_api 
     image: aguamonkey/which_animal_am_i_luck_api
     build: ./service3
-  service3:
+  service4:
     container_name: which_animal_am_i_fortune_api 
     image: aguamonkey/which_animal_am_i_fortune_api
     build: ./service4
