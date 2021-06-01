@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 
 # animal generator route here
-@app.route('/get_fortune', methods=['GET'])
+@app.route('/get_fortune', methods=['GET', "POST"])
 def get_fortune():
 
     # There will be a bunch of if statements here:

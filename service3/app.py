@@ -11,7 +11,8 @@ def get_number():
     #if date this year and between this date and this date
     # return this animal
     #This will be a random number generator
-    return random.choice([1, 2, 3])
+    number = str(random.randint(1,100))
+    return number
     
 
 

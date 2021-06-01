@@ -31,21 +31,24 @@ class Animals(db.Model):
     luck_rating = db.Column(db.Integer)
     fortune = db.Column(db.String(200), nullable=False)   
 
-@app.route('/')
+@app.route('/', methods=['GET', "POST"])
 def home():
+    form = LoginForm()
+
     if request.method == "POST":
-        animal = requests.get('http://which_animal_am_i_name_api:5000/get_animal')
-        luck_number = requests.get('http://which_animal_am_i_luck_api:5000/get_number') 
-        fortune = requests.post('http://which_animal_am_i_fortune_api:5000/get_fortune')
-        
-        db.session.commit()
-        return render_template('fortune.html', animal=animal, luck_number=luck_number, fortune=fortune)
 
+        if form.validate_on_submit():
+          #  animal = requests.post('http://which_animal_am_i_name_api:5000/get_animal', data=form.birthdate.data)
+            luck_number = requests.get('http://which_animal_am_i_luck_api:5000/get_number') 
+            fortune = requests.post('http://which_animal_am_i_fortune_api:5000/get_fortune') #has to be a data = something )
+            #db.session.add(animal.text)
+            db.session.commit()
+            #return redirect(url_for("fortune"))
+        return render_template('fortune.html', luck_number=luck_number.text, fortune=fortune.text)
+ 
     else:
-        form = LoginForm()
+            
         return render_template('index.html', form=form)
-
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
