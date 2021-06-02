@@ -11,8 +11,10 @@ def get_number():
     #if date this year and between this date and this date
     # return this animal
     #This will be a random number generator
-    number = str(random.randint(1,100))
-    return number
+
+    number = (random.randint(1,100))
+    return jsonify({"luck_number" : number})
+
     
 
 

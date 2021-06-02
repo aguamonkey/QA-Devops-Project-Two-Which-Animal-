@@ -38,13 +38,21 @@ def home():
     if request.method == "POST":
 
         if form.validate_on_submit():
-          #  animal = requests.post('http://which_animal_am_i_name_api:5000/get_animal', data=form.birthdate.data)
+            year = form.birthdate.data.year
+            month = form.birthdate.data.month
+            day = form.birthdate.data.day
+
+            
+            name = requests.post('http://which_animal_am_i_name_api:5000/get_animal', json={"year": year, "month": month, "day":day})
+            
             luck_number = requests.get('http://which_animal_am_i_luck_api:5000/get_number') 
-            fortune = requests.post('http://which_animal_am_i_fortune_api:5000/get_fortune') #has to be a data = something )
+
+            result = {**name.json(), **luck_number.json()}
+            fortune = requests.post('http://which_animal_am_i_fortune_api:5000/get_fortune', json=result)
             #db.session.add(animal.text)
             db.session.commit()
             #return redirect(url_for("fortune"))
-        return render_template('fortune.html', luck_number=luck_number.text, fortune=fortune.text)
+        return render_template('fortune.html', name=name.text, luck_number=luck_number.text, fortune=fortune.text)
  
     else:
             
