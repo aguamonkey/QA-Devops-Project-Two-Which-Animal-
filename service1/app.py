@@ -46,13 +46,14 @@ def home():
             name = requests.post('http://which_animal_am_i_name_api:5000/get_animal', json={"year": year, "month": month, "day":day})
             
             luck_number = requests.get('http://which_animal_am_i_luck_api:5000/get_number') 
+            #raise ValueError(luck_number.text)
 
             result = {**name.json(), **luck_number.json()}
             fortune = requests.post('http://which_animal_am_i_fortune_api:5000/get_fortune', json=result)
             #db.session.add(animal.text)
             db.session.commit()
             #return redirect(url_for("fortune"))
-        return render_template('fortune.html', name=name.text, luck_number=luck_number.text, fortune=fortune.text)
+        return render_template('fortune.html', name=name.json()["name"], luck_number=luck_number.json()["luck_number"], fortune=fortune.text)
  
     else:
             

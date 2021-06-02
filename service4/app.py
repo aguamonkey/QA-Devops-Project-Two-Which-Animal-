@@ -11,12 +11,14 @@ def get_fortune():
         number = request.json["luck_number"]
 
 
-        if animal = "Monkey" and luck_number > 75:
+        if animal == "Monkey" and number > 75:
             return "This is going to be a great year in which all of your dreams come true"
-        elif animal = "Monkey" and luck_number < 75 or luck_number > 45:
+        elif animal == "Monkey" and number < 75 and number > 45:
             return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal = "Monkey" and luck_number < 45:
-            return "THis will be a hard year but will make you stronger"
+        elif animal == "Monkey" and number < 45:
+            return "This will be a hard year but will make you stronger"
+        else:
+            return "No fortune detected, you must live in another timezone"
         
 
 
@@ -25,8 +27,6 @@ def get_fortune():
    #     else:
    #         return "You are not a monkey"
   
-
-    return "This is going to be a great year in which all of your dreams come true"
 
         
     
