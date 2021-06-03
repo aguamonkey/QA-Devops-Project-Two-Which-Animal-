@@ -19,11 +19,11 @@ pipeline {
 
             }
         }
-        stage('Ansible') {
-            steps {
-                // steps here
-            }
-        }
+     //   stage('Ansible') {
+      //      steps {
+      //          // steps here
+      //      }
+      //  }
         stage('Run') {
             steps {
                 // steps here
