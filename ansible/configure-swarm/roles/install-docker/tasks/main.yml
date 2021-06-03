@@ -30,3 +30,7 @@
     name: aguamonkey
     groups: docker
     append: yes
+
+- name: "Install Docker with pip"
+  pip:
+  
