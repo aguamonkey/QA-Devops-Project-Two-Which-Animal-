@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh 'docker-compose build --parallel'
                 sh 'docker login -u ${username} -p ${password}'
-
+                sh 'docker exec which_animal_am_i_server python3 create.py'
             }
         }
         stage('Push') {
