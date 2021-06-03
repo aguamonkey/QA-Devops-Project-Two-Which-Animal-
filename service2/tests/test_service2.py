@@ -10,6 +10,6 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
     def test_get_animal(self):
 
-        for _ in range(20):
+        for _ in range(1):
             response = self.client.post(url_for('get_animal'), json={"year": 1992, "month": 4, "day":23})
             self.assertEqual(response.json['name'],("Monkey"))
