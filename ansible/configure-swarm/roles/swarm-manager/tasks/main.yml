@@ -7,7 +7,7 @@
 - name: "Shows swarm info"
   docker_swarm_info:
   register: swarm_info
-
-- name: "Show info"
-  debug:
-    msg: "{{ swarm_info }}"
+#prints everything
+#- name: "Show info"
+#  debug:
+#    msg: "{{ swarm_info }}"
