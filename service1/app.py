@@ -32,6 +32,7 @@ class Animals(db.Model):
     fortune = db.Column(db.String(200), nullable=False)   
 
 @app.route('/', methods=['GET', "POST"])
+#@app.route('/home')
 def home():
     form = LoginForm()
 
@@ -49,6 +50,7 @@ def home():
             #raise ValueError(luck_number.text)
 
             result = {**name.json(), **luck_number.json()}
+            
             fortune = requests.post('http://which_animal_am_i_fortune_api:5000/get_fortune', json=result)
             #db.session.add(animal.text)
             db.session.commit()
