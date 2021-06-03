@@ -3,6 +3,8 @@ pipeline {
     environment {
         DATABASE_URI = credentials("DATABASE_URI")
         SECRET_KEY = credentials("SECRET_KEY")
+        username = credentials("USERNAME")
+        password = credentials("PASSWORD")
 
     }
 
@@ -13,17 +15,20 @@ pipeline {
                 sh 'bash Jenkins/run-tests.sh'
             }
         }
-        stage('Build-Push') {
+        stage('Build') {
             steps {
-            sh 'bash Jenkins/build-push.sh'
+                sh 'docker-compose build --parallel'
+                sh 'docker login -u ${username} -p ${password}'
 
             }
         }
-     //   stage('Ansible') {
-      //      steps {
-      //          // steps here
-      //      }
-      //  }
+        stage('Push') {
+            steps {
+                
+                sh 'docker-compose push'
+
+            }
+        }
         stage('Run') {
             steps {
                 // steps here
