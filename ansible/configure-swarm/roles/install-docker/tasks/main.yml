@@ -1,0 +1,32 @@
+---
+# tasks file for install-docker
+- name: "Install dependencies"
+  apt:
+    pkg:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gnupg
+    - lsb-release
+- name: "Get Docker APT key"
+  ansible.builtin.apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: "Add Docker APT Repo"
+  ansible.builtin.apt_repository:
+    repo: "deb https://download.docker.com/linux/ubuntu bionic stable"
+    state: present
+
+- name: "Install Docker"
+  apt:
+    pkg:
+    - docker-ce
+    - docker-ce-cli
+    - container.io
+
+- name: "Add User to Docker Group"
+  ansible.builtin.user:
+    name: aguamonkey
+    groups: docker
+    append: yes

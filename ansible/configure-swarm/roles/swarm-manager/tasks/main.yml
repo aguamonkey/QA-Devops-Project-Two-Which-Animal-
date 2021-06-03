@@ -1,0 +1,13 @@
+---
+# tasks file for swarm-manager
+- name: "Init a new swarm"
+  docker_swarm:
+    state: present
+
+- name: "Shows swarm info"
+  docker_swarm_info:
+  register: swarm_info
+
+- name: "Show info"
+  debug:
+    msg: "{{ swarm_info }}"
