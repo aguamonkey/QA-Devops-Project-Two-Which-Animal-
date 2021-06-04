@@ -13,4 +13,4 @@ class TestResponse(TestBase):
 
         for _ in range(20):
             response = self.client.get(url_for('get_number'))
-            self.assertIn(response.json['luck_number'], range(0,100))
+            self.assertIn(response.json['luck_number'], range(0,101))
