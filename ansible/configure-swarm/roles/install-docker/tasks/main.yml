@@ -31,12 +31,12 @@
     - containerd.io
 
 - name: "Add User to Docker Group"
-  ansible.builtin.user:
+  user:
     name: JoshuaBrowne
     groups: docker
     append: yes
 
 - name: "Install Docker with pip"
   pip:
-    name: bottle
+    name: docker
     executable: pip3
