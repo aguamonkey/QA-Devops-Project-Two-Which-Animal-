@@ -1,4 +1,3 @@
-scp create.py docker-manager:
 scp docker-compose.yaml docker-manager:
 ssh docker-manager << EOF
 export SECRET_KEY=${SECRET_KEY}
