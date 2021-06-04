@@ -31,7 +31,7 @@ pipeline {
         stage('Ansible') {
             steps{
                 
-                sh 'bash/Jenkins/run-ansible.sh'
+                sh 'bash Jenkins/run-ansible.sh'
                 sh 'ansible-playbook -i ansible/configure-swarm/inventory.yaml ansible/configure-swarm/playbook.yaml'
             }
         }
