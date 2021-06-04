@@ -32,7 +32,7 @@ pipeline {
             steps{
                 
                 sh 'bash Jenkins/run-ansible.sh'
-                sh 'ansible-playbook -i ansible/configure-swarm/inventory.yaml ansible/configure-swarm/playbook.yaml --extra-vars "ansible_sudo_pass="'
+                sh 'ansible-playbook -i ansible/configure-swarm/inventory.yaml ansible/configure-swarm/playbook.yaml'
             }
         }
         stage('Run') {
