@@ -8,10 +8,5 @@
   docker_swarm_info:
   register: swarm_info
 
-- name: "Add to docker group"
-  user: 
-    name: "{{ lookup('env', 'USER') }}"
-    groups: docker
-  
 
 
