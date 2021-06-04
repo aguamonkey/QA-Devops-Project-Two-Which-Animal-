@@ -36,4 +36,7 @@
     groups: docker
     append: yes
 
-
+- name: "Install Docker with pip"
+  pip:
+    name: docker
+    executable: pip3
