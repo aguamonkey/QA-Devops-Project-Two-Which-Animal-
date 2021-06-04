@@ -32,7 +32,6 @@ pipeline {
             steps{
                 
                 sh 'bash Jenkins/run-ansible.sh'
-                sh 'export ANSIBLE_HOST_KEY_CHECKING=False'
                 sh 'ansible-playbook -i ansible/configure-swarm/inventory.yaml ansible/configure-swarm/playbook.yaml'
             }
         }
