@@ -6,6 +6,7 @@ all:
     workers:
       hosts:
         docker-swarm:
+        docker-swarm-two:
     
     nginx:
       hosts:
