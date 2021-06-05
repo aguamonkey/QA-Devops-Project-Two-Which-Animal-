@@ -5,8 +5,8 @@ services:
     image: aguamonkey/which_animal_am_i_server
     build: ./service1
     ports: 
-    #deploy: For when the swarm is activated
-      #replicas: 5
+    deploy:
+      replicas: 5
     - published: 5000
       target: 5000
     environment:
