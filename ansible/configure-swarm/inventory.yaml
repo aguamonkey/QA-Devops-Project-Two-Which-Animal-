@@ -7,9 +7,9 @@ all:
       hosts:
         docker-swarm:
     
-    load_balance:
+    nginx:
       hosts:
-        load-balance:
+        nginx:
   vars:
     ansible_python_interpreter: "/usr/bin/python3"
   
