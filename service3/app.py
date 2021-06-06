@@ -1,27 +1,22 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import random
 
 app = Flask(__name__)
 
 # animal generator route here
-@app.route('/get_lucky_number', methods=['GET'])
-def get_animal():
+@app.route('/get_number', methods=['GET'])
+def get_number():
 
     # There will be a bunch of if statements here:
     #if date this year and between this date and this date
     # return this animal
     #This will be a random number generator
-    return random.choice(['cow', 'pig', 'horse'])
+
+    number = (random.randint(1,100))
+    return jsonify({"luck_number" : number})
+
     
-# animal noise generator route here
-@app.route('/get_noise', methods=['POST'])
-def get_noise():
-    noises = {
-        "cow" : "moo",
-        "pig" : "oink",
-        "horse" : "neigh"
-    }
-    return noises[request.data.decode('utf-8')]
+
 
 
 if __name__ == "__main__":

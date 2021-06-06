@@ -8,17 +8,12 @@
         <h1>
             Which Animal Am I?
         </h1>
-        <p>
-            The {{ animal }} you are is a {{ name }}
-        </p>
-        <h2>
-            The last five animals and their Noises
-        </h2>
-        <p>
-            {% for animal in last_five_animals %}
-            The {{ animal.type }} goes {{ noise }}
-            <br>
-            {% endfor %}
-        </p>
+        <form action='' method='POST'>
+            {{ form.hidden_tag() }}
+            {{ form.birthdate.label }} {{ form.birthdate }} <br><br>
+            {{ form.submit }}
+        </form>
+
+
     </body>
 </html>

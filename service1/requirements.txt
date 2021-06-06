@@ -13,3 +13,5 @@ pytest
 pytest-cov
 flask-testing
 flask-requests
+requests
+requests-mock

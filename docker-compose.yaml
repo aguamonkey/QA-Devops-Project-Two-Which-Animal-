@@ -1,21 +1,27 @@
 version: "3.8"
 services: 
-  service1:
+  which_animal_am_i_server:
     container_name: which_animal_am_i_server
     image: aguamonkey/which_animal_am_i_server
     build: ./service1
     ports: 
+    #deploy: For when the swarm is activated
+      #replicas: 5
     - published: 5000
       target: 5000
     environment:
       DATABASE_URI: ${DATABASE_URI}
-  service2:
-    container_name: animal_name_api 
-    image: aguamonkey/animal_name_api
-    build: ./animal_api
-  service2:
-    container_name: animal_name_api 
-    image: aguamonkey/animal_name_api
-    build: ./animal_api
+  which_animal_am_i_name_api:
+    container_name: which_animal_am_i_name_api 
+    image: aguamonkey/which_animal_am_i_name_api
+    build: ./service2
+  which_animal_am_i_luck_api:
+    container_name: which_animal_am_i_luck_api 
+    image: aguamonkey/which_animal_am_i_luck_api
+    build: ./service3
+  which_animal_am_i_fortune_api:
+    container_name: which_animal_am_i_fortune_api 
+    image: aguamonkey/which_animal_am_i_fortune_api
+    build: ./service4
 
     

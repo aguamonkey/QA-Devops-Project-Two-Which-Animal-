@@ -1,0 +1,16 @@
+all:
+  children:
+    managers:
+      hosts:
+        docker-manager:
+    workers:
+      hosts:
+        docker-swarm:
+        docker-swarm--three:      
+    
+    nginx:
+      hosts:
+        nginx:
+  vars:
+    ansible_python_interpreter: "/usr/bin/python3"
+  
