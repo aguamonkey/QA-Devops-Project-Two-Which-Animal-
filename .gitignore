@@ -38,6 +38,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
+junit/
 htmlcov/
 .tox/
 .nox/
@@ -129,3 +130,4 @@ dmypy.json
 .pyre/
 
 *.db
+*.xml
