@@ -92,11 +92,23 @@ This application mainly focused on unit testing to ensure each server worked in 
 
 ### *Continous Integration*
 
-Through learning about continous integration and having now experienced it in practice within my own project, I see how it would fit in well with any business. It allows for a streamlined development process that leads to deploying a product that has a strong foundation. I use Git as my version control system to push my code to andd then used Jenkins to fetch and build the repositiory. Finally I used Pytest in combination with Jenkins to display the coverage reports.
+Through learning about continous integration and having now experienced it in practice within a couple of my own project, I see how it would fit in well with any business. It allows for a streamlined development process that leads to deploying a product that has a strong foundation. I use Git as my version control system to push my code to and then used a Jenkinsfile within my code to fetch and build the repositiory as well as run docker compose and configure all the different roles through ansible. Once everything was setup the swarm was then deployed.
 
-![Image of CI Pipeline](https://i.imgur.com/nJbmeV6.png)
+Here is an image to walk you through what's going on in my CI pipeline.
+
+![Image of CI Pipeline](https://i.imgur.com/O7fy9ub.png)
 
 ### *Entity Diagram*
+
+Designing the structure of this database was much simpler as there were no relationships to account for. However it is still important to highlight how everything was set up.
+
+![Image of ED](https://i.imgur.com/9YDYcy6.png)
+
+### *Interactions*
+
+The diagram below outlines the process theat happens as a user connects to our docker swarm through an NGINX load balancer:
+
+![Image of NGINX](https://i.imgur.com/lVLHpEw.png)
 
 ## *Development*
 
