@@ -163,7 +163,7 @@ Finally for service 4 I inputed the animal name and luck number from within my j
 
 ### *Future Improvements*:
 
-There are a number of improvements I would like to make given the time in the future:
+There are a number of improvements I would like to make given the time in the future.
 
 * I would implement selenium testing within my tests so that I could ensure that the site was tested in the most thorough way possible.
 * I would look at adding sounds and images to the site to give it a better look and feel.
