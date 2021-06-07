@@ -8,10 +8,11 @@
 * [Architecture](#Architecture)
     * [Trello Board](#Trello-Board)
     * [Risk Assessment](#Risk-Assessment)
-    * [Test Analysis](#Test-Analysis)
-* [Infastructure](#Infastucture)
-    * [Entity Relationship Diagram](entity-relationship-diagram)
-    * [Continuous Integration](#continous-integration)
+    * [Testing Setup](#Testing-Setup)
+* [Infrastructure](#Infrastructure)
+    * [Continuous Integration](#continous-integration)  
+    * [Entity Diagram](entity-diagram)
+    
 * [Development](#Development)
     * [Unit Testing](#Unit-Testing)
     * [Front End Design](#Front-End-Design)
@@ -64,31 +65,30 @@ The best way I can show you what my aim was is by detailing the specific service
 
 ### *Trello Board*
 
-[Link to my trello](https://trello.com/b/uiTDLXOj/yoga-database)
+[Link to my trello](https://trello.com/b/IUMISsfV/which-animal-am-i)
 
-I decided to use Trello because it is simple in it's design, free to use and is a good visual aid to manage your progress. I implemented MOSCOW prioritisation using a color scheme. I then came up with users stories to outline what was essential for the project and what could be added later on given time. 
+I decided to use Trello because it is simple in it's design, free to use and is a good visual aid to manage your progress. I implemented MOSCOW prioritisation using a color scheme. I then came up with a few user stories to outline the direction my project would go in and then based on these starting to set up my backlogs. Once the backlogs were done, I assigned tasks to the scrums as and when they were necessary. 
 
-![Image of trello board](https://i.imgur.com/uGmkthF.png)
+![Image of trello board](https://i.imgur.com/zBOZwLu.png)
 
 ### *Risk Assessment*
 
-[Link to my risk assessment](https://drive.google.com/file/d/1sVfHTS3elFST2yJLKFw23mm5o9dXxSsp/view?fbclid=IwAR2iUwtC9rpF7Q6T-WdpysZn49X9h6FEpmyEuyMg-PZLmy_1wVFVJn74WLs)
+[Link to my risk assessment](https://docs.google.com/spreadsheets/d/1h6sSbGBpRzu-AWcA5ZBxbTg6rulTKAoo/edit#gid=682879054)
 
-For my initial risk assessment I focused more on the physical risks associated with attempting to do yoga. This initial analysis along with the user stories put forward, helped me clarify what types of information to host on my site aswell as within my database. For instance, a risk that came up was the possibilty of injury for the user. This lead me to display warnings on my site and showed me it would be important to have a difficulty section within the database, stemming from beginner to intermediate to advanced. The rows highlighted in grey came after I learned more about the risks associated with databases from the course.
+For my initial risk assessment I focused more on the risks I came across from my first project, centered around database risks and leaking of credentials. As I grew to understand the virtual machines and how dependent on them my project was, I began to see that there were other specific risks associated with this project. These have been added at a later point and are highlighted in grey in order to establish this fact.
 
-![Image of risk assessment](https://i.imgur.com/olmMcyc.png)
+![Image of risk assessment](https://i.imgur.com/unrJw5X.png)
 
 
-### *Entity Relationship Diagram*
+### *Testing Setup*
 
 The first version of my ERD was as follows:
 
-![One to many ERD](https://i.imgur.com/vMe0edK.png)
+![Jenkins Pipeline Setup](https://i.imgur.com/DiD8R5G.png)
 
-As you can see, my initial idea was to have a one to many database relationship between yoga_moves and yoga_sequences. This would have worked if each sequence had its own set of moves. However, due to the fact that I wanted the user to be able to reference the same moves in multiple sequences it then became clear that a many to many relationship was needed. I created a third table to reference both of the primary keys from the other two tables as you can see below:
+This application mainly focused on unit testing to ensure each server worked in the correct way. The testing was adding as part of the Jenkinsfile to be sure that at the beginning of any build all of the tests passed.
 
-![Many to many ERD](https://i.imgur.com/b4gayXX.png)
-
+## *Infrastructure*
 
 ### *Continous Integration*
 
@@ -96,6 +96,7 @@ Through learning about continous integration and having now experienced it in pr
 
 ![Image of CI Pipeline](https://i.imgur.com/nJbmeV6.png)
 
+### *Entity Diagram*
 
 ## *Development*
 
