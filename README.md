@@ -112,31 +112,51 @@ The diagram below outlines the process theat happens as a user connects to our d
 
 ## *Development*
 
-### *Unit Testing*
-
-As mentioned unit testing was used to ensure that the functionality of different parts of my database all ran correctly. I attempted to be as in depth as possible with my testing. I wanted to ensure that all elements of the database were covered. I ran pytest in the terminal of my app and ended up with 100% coverage as seen below.
-
-![Image of terminal tests](https://i.imgur.com/5Swfy00.png)
-
-I then created two .sh files, one for running the program and one for running the test through Jenkins. As you can see the result returned was the same.
-
-![Image of tests run through jenkins](https://i.imgur.com/3bcAn7p.png)
-
 ### *Front End Design*
 
 Below is a brief outline of how the front end of the website looks.
 
 Home Page:
 
-![Image of home page](https://i.imgur.com/rSq2lJw.png)
+First you have the home page where you are able to select your date of birth.
 
-Create Move Page:
+![Image of home page](https://i.imgur.com/F7dOEyO.png)
 
-![Image of create move page](https://i.imgur.com/BDF21WN.png)
+Select a date:
 
-Create Sequence Page:
+You do this from the drop down menu that is presented.
 
-![Image of create sequence page](https://i.imgur.com/NXpPkOQ.png)
+![Image of select a date](https://i.imgur.com/fETUPQQ.png)
+
+Your fortune:
+
+Then once you've entered your details, you are transported to the fortune.html page where you will see the animal you are, along with your lucj number and your fortune for this year.
+
+![Image of fortune page](https://i.imgur.com/PkFnBCX.png)
+
+
+### *Unit Testing*
+
+As mentioned unit testing was used to ensure that the functionality of each of my services ran correctly. I attempted to be as in depth as possible with my testing. I wanted to ensure that all elements of the database were covered. I ran pytest in the terminal of my app and ended up with over 90% in most areas coverage as seen below.
+
+![Image of service 1 tests](https://i.imgur.com/3LEdrzX.png)
+
+For service 1 I had to structure the test to take a specified date and then based on that date I instructed the test to gather a certain set of data. If the data was accurate then the test was a success.
+
+![Image of service 2 tests](https://i.imgur.com/FTulHix.png)
+
+For service 2 I again inputted a date and told the test what I expected to be returned in reference to the animal name associated with the test.
+
+![Image of service 3 tests](https://i.imgur.com/BMY9GMM.png)
+
+FOr service 3 I used a for loop to loop through random numbers between 0 and 101 to determine as to whether the luck number generator was working accordingly.
+
+![Image of service 4 tests](https://i.imgur.com/pphKUGR.png)
+
+Finally for service 4 I inputed the animal name and luck number from within my json dictionary and then based on these two factors I inputted what I expected the fortune to be as a result. All tests passed.
+
+
+
 
 
 ## *Footer*
@@ -146,8 +166,8 @@ Create Sequence Page:
 There are a number of improvements I would like to make given the time in the future.
 
 * I would implement selenium testing within my tests so that I could ensure that the site was tested in the most thorough way possible.
-* I would look at creating a comment section and rating system for the yoga poses and sequences created, ,so that users could share knowledge with each other. This would also requre a social media style username and password functionality.
-* FInally I would incorporate images and videos in to my html code so any user could visually see how to do a specific pose, rather than just reading about how to.
+* I would look at adding sounds and images to the site to give it a better look and feel.
+* I would go more in depth to the actual astrology of each animal and what the unique fortunes of them are. 
 
 ### *Author*
 
