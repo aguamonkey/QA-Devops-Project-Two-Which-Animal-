@@ -20,12 +20,12 @@ class TestBase(TestCase):
 class TestHome(TestBase):
     def test_home(self):
         with requests_mock.Mocker() as mocker:
-            mocker.post('http://which_animal_am_i_name_api:5000/get_animal', json={'name' : 'Monkey'})
+            mocker.post('http://which_animal_am_i_name_api:5000/get_animal', json={'name' : 'Happy Pigeon'})
             mocker.get('http://which_animal_am_i_luck_api:5000/get_number', json={'luck_number' : 55})
             mocker.post('http://which_animal_am_i_fortune_api:5000/get_fortune', text='This is going to be a year of ups and downs but in the end it will be a good one')
 
             response = self.client.post(url_for('home'),data={"birthdate" : datetime.date(1992, 4, 23)})
             self.assertEqual(response.status_code, 200)
-            self.assertIn(b'Monkey', response.data)
+            self.assertIn(b'Happy Pigeon', response.data)
             self.assertIn(b'55', response.data)
             self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)

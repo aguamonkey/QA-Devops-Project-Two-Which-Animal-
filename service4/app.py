@@ -11,78 +11,78 @@ def get_fortune():
         number = request.json["luck_number"]
 
 
-        if animal == "Monkey" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Monkey" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Monkey" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Rooster" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Rooster" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Rooster" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Dog" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Dog" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Dog" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Pig" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Pig" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Pig" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Rat" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Rat" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Rat" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Ox" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Ox" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Ox" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Tiger" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Tiger" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Tiger" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Rabbit" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Rabbit" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Rabbit" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Dragon" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Dragon" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Dragon" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Snake" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Snake" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Snake" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Horse" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Horse" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Horse" and number < 45:
-            return "This will be a hard year but will make you stronger"
-        elif animal == "Sheep" and number > 75:
-            return "This is going to be a great year in which all of your dreams come true"
-        elif animal == "Sheep" and number < 75 and number > 45:
-            return "This is going to be a year of ups and downs but in the end it will be a good one"
-        elif animal == "Sheep" and number < 45:
-            return "This will be a hard year but will make you stronger"
+        if animal == "Happy Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Happy Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Happy Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Sad Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Sad Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Sad Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Angry Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Angry Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Angry Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Excited Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Excited Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Excited Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Depressed Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Depressed Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Depressed Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Anxious Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Anxious Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Anxious Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Fierce Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Fierce Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Fierce Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Grumpy Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Grumpy Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Grumpy Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Sleepy Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Sleepy Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Sleepy Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Beautiful Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Beautiful Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Beautiful Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Evil Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Evil Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Evil Pigeon" and number < 3:
+            return "You will go hungry"
+        elif animal == "Hero Pigeon" and number >= 7:
+            return "You will get all the seeds you desire this year"
+        elif animal == "Hero Pigeon" and number < 7 and number >= 3:
+            return "You will have to be moderate in your seed consumption"
+        elif animal == "Hero Pigeon" and number < 3:
+            return "You will go hungry"
         else:
             return "No fortune detected, you must live in another timezone"
         

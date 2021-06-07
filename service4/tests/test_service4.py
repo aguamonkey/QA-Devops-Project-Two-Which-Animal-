@@ -13,184 +13,184 @@ class TestResponse(TestBase):
         for _ in range(20):
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Monkey", luck_number = 55),
+                json=dict(name = "Happy Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Rooster", luck_number = 55),
+                json=dict(name = "Sad Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Dog", luck_number = 55),
+                json=dict(name = "Angry Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Pig", luck_number = 55),
+                json=dict(name = "Excited Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Rat", luck_number = 55),
+                json=dict(name = "Depressed Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Ox", luck_number = 55),
+                json=dict(name = "Anxious Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Tiger", luck_number = 55),
+                json=dict(name = "Fierce Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Dragon", luck_number = 55),
+                json=dict(name = "Grumpy Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Rabbit", luck_number = 55),
+                json=dict(name = "Sleepy Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Horse", luck_number = 55),
+                json=dict(name = "Beautiful Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Snake", luck_number = 55),
+                json=dict(name = "Evil Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Sheep", luck_number = 55),
+                json=dict(name = "Hero Pigeon", luck_number = 5),
             )
-            self.assertIn(b'This is going to be a year of ups and downs but in the end it will be a good one', response.data)
+            self.assertIn(b'You will have to be moderate in your seed consumption', response.data)
 
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Monkey", luck_number = 77),
+                json=dict(name = "Happy Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Rooster", luck_number = 77),
+                json=dict(name = "Sad Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Dog", luck_number = 77),
+                json=dict(name = "Angry Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Pig", luck_number = 77),
+                json=dict(name = "Excited Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Rat", luck_number = 77),
+                json=dict(name = "Depressed Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Ox", luck_number = 77),
+                json=dict(name = "Anxious Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Tiger", luck_number = 77),
+                json=dict(name = "Fierce Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Dragon", luck_number = 77),
+                json=dict(name = "Grumpy Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Rabbit", luck_number = 77),
+                json=dict(name = "Sleepy Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Horse", luck_number = 77),
+                json=dict(name = "Beautiful Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Snake", luck_number = 77),
+                json=dict(name = "Evil Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Sheep", luck_number = 77),
+                json=dict(name = "Hero Pigeon", luck_number = 7),
             )
-            self.assertIn(b'This is going to be a great year in which all of your dreams come true', response.data)
+            self.assertIn(b'You will get all the seeds you desire this year', response.data)
             
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Monkey", luck_number = 22),
+                json=dict(name = "Happy Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Rooster", luck_number = 22),
+                json=dict(name = "Sad Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Dog", luck_number = 22),
+                json=dict(name = "Angry Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Pig", luck_number = 22),
+                json=dict(name = "Excited Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Rat", luck_number = 22),
+                json=dict(name = "Depressed Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Ox", luck_number = 22),
+                json=dict(name = "Anxious Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Tiger", luck_number = 22),
+                json=dict(name = "Fierce Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Dragon", luck_number = 22),
+                json=dict(name = "Grumpy Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Rabbit", luck_number = 22),
+                json=dict(name = "Sleepy Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Horse", luck_number = 22),
+                json=dict(name = "Beautiful Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Snake", luck_number = 22),
+                json=dict(name = "Evil Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             response = self.client.post(
                 url_for('get_fortune'),
-                json=dict(name = "Sheep", luck_number = 22),
+                json=dict(name = "Hero Pigeon", luck_number = 2),
             )
-            self.assertIn(b'This will be a hard year but will make you stronger', response.data)
+            self.assertIn(b'You will go hungry', response.data)
             

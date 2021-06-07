@@ -22,7 +22,7 @@ db = SQLAlchemy(app)
 
 class LoginForm(Form):
     birthdate = DateField('birthdate', format='%Y-%m-%d', validators=[DataRequired()])
-    submit = SubmitField('What is my fortune?')
+    submit = SubmitField('What is my destiny?')
 
 #type now equals name
 class Animals(db.Model):

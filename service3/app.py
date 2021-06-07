@@ -12,7 +12,7 @@ def get_number():
     # return this animal
     #This will be a random number generator
 
-    number = (random.randint(1,100))
+    number = (random.randint(1,10))
     return jsonify({"luck_number" : number})
 
     
