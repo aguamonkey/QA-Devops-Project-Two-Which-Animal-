@@ -167,7 +167,7 @@ There are a number of improvements I would like to make given the time in the fu
 
 * I would implement selenium testing within my tests so that I could ensure that the site was tested in the most thorough way possible.
 * I would look at adding sounds and images to the site to give it a better look and feel.
-* I would go more in depth to the actual astrology of each animal and what the unique fortunes of them are. 
+* I would go more in depth to the actual astrology of each animal and what the unique fortunes of them are. I may even link the western astrology with the chinese one. 
 
 ### *Author*
 
