@@ -82,7 +82,6 @@ For my initial risk assessment I focused more on the risks I came across from my
 
 ### *Testing Setup*
 
-The first version of my ERD was as follows:
 
 ![Jenkins Pipeline Setup](https://i.imgur.com/DiD8R5G.png)
 
