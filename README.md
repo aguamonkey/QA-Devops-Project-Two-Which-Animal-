@@ -1,4 +1,4 @@
-# Which-animal-am-I-Project
+# Which Animal Am I Project
 
 ## *Contents*
 
@@ -22,52 +22,43 @@
 
 ### *Objective*
 
-For this project our main goal was:
-To create a CRUD application that utilised the supporting tools, methodologies and technologies covered so far during our training.
+For this project our main goal was to create a service-orientated architecture for our own applications. Overall the application had to be composed of at leat 4 services working together. Before I go into how I planned to design each individual server, let's first look at the minimum set of requirements we hoped to achieve.
 
 
 Specifically we were required to:  
 
-* Create a Trello board or equivelant detailing our user stories, use cases and tasks needed in order to complete the project.
-* Create a relational database with at least two tables in it modeling a relationship between said tables. A one to many relationship was the basic requirement needed.
-* Put forward clear documentation from a design phase highlighting the architecture used as well as a detailed risk assessment.
-* Build a functional CRUD application created with Python, following the best practices and design principles relating to the requirements set on our Trello board. 
-* Design fully automated tests for validation of the application.
-* Build a fully functioning front-end website using Flask.
-* Fully integrate our code into a version contol system using a feature-branch model which will then be built through a CI server and deployed to a cloud based virtual machine.
+* Create a Trello board with full expansion on tasks needed to complete the project.
+* Provide a risk assessment with any issues or risks faced creating the project.
+* Create an application that was fully integrated using the feature-branch model in to a version control system, which then would be built through a CI server and deployed to a cloud based virtual machine.
+* Implement webhooks when any changes are made and pushed up to github, meaning Jenkins reacts to any new uploads and deploys the application as a result.
+* Follow the service-orientated architecture as previously mentioned.
+* Deploy the project using containerisation and an orchestration tool.
+* Create an Ansible Playbook that will provision the environment our application needs to run.
+* Finally use a reverse proxy to make the application accessible to the user.
 
 ### *Proposal*
 
-For my project my aim was to create a website focusing on yoga sequences and the moves that make up said sequences. Users could create as many yoga moves as they desired and then add their moves to a sequence allowing them to build thier own workout. 
+For my project my aim was to create a website that allowed the user to input their date of birth and then as a result find out what there chinese zodiac was. Along with their animal zodiac a random luck number would be generated and based on the number they would be assigned a fortune for the year ahead.
 
-The best way I can show you what my aim was is by detailing the CRUD functionality below:
+The best way I can show you what my aim was is by detailing the specific services below:
 
-*Create:*
+*Service 1:*
 
-* Yoga Move:
-    * Name
-    * Instructions
-    * Difficulty
+* Home Page:
+    * Here you would encounter a date form using html5 where you could select your date of birth from a drop down menu.
+    * This services main job, was to communicate to the other three services within the application along with persisting the data from said services in to an SQL database.
 
-* Yoga Sequence:
-    * Name
-    * Difficulty
-    * Time (To complete in minutes)
-    * Moves (referenced from Yoga Moves database)
+*Service 2:*
+* Get Animal Name
+    * Based on the date of birth inputted by the user this service would take the date and through using conditional statements, determine which animal the user was to be assigned.
 
-*Read:*
+*Service 3:*
+* Random Number Generator
+    * This service would generate a random number from 0-100. This was to be the luck number for the year ahead. It would have a direct effect on the fortune of how the users year was going to go.
 
-* The yoga moves along with their instructions and difficulty level
-* The yoga sequences along with their overall difficulty, time to complete and the moves within the sequence.
-
-*Update:*
-
-* Contents of Yoga Move.
-* Contents of Yoga Sequence.
-
-*Delete:*
-* Yoga Moves
-* Yoga Sequence
+*Service 4:*
+* Fortune
+    * For the final service, based on the animal you were assigned and the luck number generated you would be given a fortune for the year ahead. If your luck number was above 75 it would be a prosperous prediction. Between 45 and 75 would mean you may face some hard times but overall it would be a good year. Finaly below 45 meant the year ahead would be a difficult one to face.
 
 ## *Architecture*
 
