@@ -171,7 +171,7 @@ There are a number of improvements I would like to make given the time in the fu
 
 ### *Author*
 
-Joshua Browne.
+Joshua Browne
 
 
 ### *Acknowledgements*
