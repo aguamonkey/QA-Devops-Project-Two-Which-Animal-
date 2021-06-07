@@ -85,7 +85,7 @@ For my initial risk assessment I focused more on the risks I came across from my
 
 ![Jenkins Pipeline Setup](https://i.imgur.com/DiD8R5G.png)
 
-This application mainly focused on unit testing to ensure each server worked in the correct way. The testing was adding as part of the Jenkinsfile to be sure that at the beginning of any build, all of the tests passed.
+This application mainly focused on unit testing to ensure each server worked in the correct way. The testing was adding as part of the Jenkinsfile to be sure that at the beginning of any build, all of the tests passed..
 
 ## *Infrastructure*
 
