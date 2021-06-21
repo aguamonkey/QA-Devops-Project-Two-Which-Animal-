@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: which_animal_am_i_server
+spec:
+  selector:
+    app: which_animal_am_i_server
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: which_animal_am_i_server
+  labels:
+    app: which_animal_am_i_server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: which_animal_am_i_server
+    spec:
+      containers:
+      - name: which_animal_am_i_server
+        image: aguamonkey/which_animal_am_i_server
+        ports:
+        - containerPort: 5000
