@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: which-animal-am-i-name-api
+spec:
+  selector:
+    app: which-animal-am-i-name-api
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: which-animal-am-i-name-api
+  labels:
+    app: which-animal-am-i-name-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: which-animal-am-i-name-api
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: which-animal-am-i-name-api
+    spec:
+      containers:
+      - name: which-animal-am-i-name-api
+        image: aguamonkey/which-animal-am-i-name-api
+        ports:
+        - containerPort: 5000

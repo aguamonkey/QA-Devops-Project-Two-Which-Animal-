@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: which_animal_am_i_server
+  name: which-animal-am-i-server
 spec:
   selector:
-    app: which_animal_am_i_server
+    app: which-animal-am-i-server
   ports:
   - protocol: TCP
     port: 80
@@ -14,14 +14,14 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: which_animal_am_i_server
+  name: which-animal-am-i-server
   labels:
-    app: which_animal_am_i_server
+    app: which-animal-am-i-server
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: service1
+      app: which-animal-am-i-server
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -30,10 +30,10 @@ spec:
   template:
     metadata:
       labels:
-        app: which_animal_am_i_server
+        app: which-animal-am-i-server
     spec:
       containers:
-      - name: which_animal_am_i_server
-        image: aguamonkey/which_animal_am_i_server
+      - name: which-animal-am-i-server
+        image: aguamonkey/which-animal-am-i-server
         ports:
         - containerPort: 5000
